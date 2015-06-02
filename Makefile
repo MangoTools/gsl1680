@@ -7,7 +7,7 @@ driver.o: driver.c driver.h
 install:
 	install gslx680 /bin
 	install -d /etc/gslx680
-	install touchscreen.fw /etc/gslx680/touchscreen.fw
+	install touchscreen.fw /etc/gslx680
 
 clean:
 	rm -rf gslx680 *.o
