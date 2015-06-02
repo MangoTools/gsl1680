@@ -41,7 +41,7 @@ put in the /etc/rc.local file the following lines in order to have the driver lu
 
 gpio export 88 output
 
-/bin/gslx680 -res 480x272 -gpio /sys/class/gpio/gpio88/value /dev/ic2-1 /etc/gslx680/touchscreen.fw
+/bin/gslx680 -res 480x272 -gpio /sys/class/gpio/gpio88/value /dev/i2c-1 /etc/gslx680/touchscreen.fw
 
 ## More info about this chip ##
 
