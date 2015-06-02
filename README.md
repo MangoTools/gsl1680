@@ -11,8 +11,6 @@ http://www.buydisplay.com/default/5-inch-multi-touch-screen-panel-with-controlle
 
 For more information on the driver itself, please use the original deposit.
 
-After running "make" and "sudo make install"
-
 ## How to use the driver ##
 
 This is a little program that runs in user space, but makes use of the UFILE driver to link itself to the INPUT subsystem, allowing it to work like any other input driver. So it is mandatory to have a kernel with UFILE support (Device Drivers -> Input devices support -> Miscellaneous devices -> User level driver support).
@@ -36,7 +34,10 @@ Pin must be exported as output. You must do this before: 'sudo gpio export 88 ou
 
 **-new_scroll** allows to use a single finger to do scrolling.
 
-Full command line I put in my /etc/rc.local file in order to have the driver lunched at startup
+
+After a "make" then a "sudo make install",
+put in the /etc/rc.local file the following lines in order to have the driver lunched at startup:
+
 
 gpio export 88 output
 
