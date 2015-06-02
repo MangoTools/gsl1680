@@ -11,7 +11,7 @@ http://www.buydisplay.com/default/5-inch-multi-touch-screen-panel-with-controlle
 
 For more information on the driver itself, please use the original deposit.
 
-After running "make" and "sudo make install", run "sudo systemctl start gslx680.service" to make systemd launch it at startup.
+After running "make" and "sudo make install"
 
 ## How to use the driver ##
 
@@ -36,11 +36,11 @@ Pin must be exported as output. You must do this before: 'sudo gpio export 88 ou
 
 **-new_scroll** allows to use a single finger to do scrolling.
 
-Full command line in my case:
+Full command line I put in my /etc/rc.local file in order to have the driver lunched at startup
 
 gpio export 88 output
 
-./gslx680 -res 480x272 -gpio /sys/class/gpio/gpio88/value /dev/ic2-1 ./touchscreen.fw
+/bin/gslx680 -res 480x272 -gpio /sys/class/gpio/gpio88/value /dev/ic2-1 /etc/gslx680/touchscreen.fw
 
 ## More info about this chip ##
 
