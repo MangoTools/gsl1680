@@ -39,6 +39,7 @@ Pin must be exported as output. You must do this before: 'sudo gpio export 88 ou
 Full command line in my case:
 
 gpio export 88 output
+
 ./gslx680 -res 480x272 -gpio /sys/class/gpio/gpio88/value /dev/ic2-1 ./touchscreen.fw
 
 ## More info about this chip ##
