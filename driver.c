@@ -169,7 +169,9 @@ static void gsl_load_fw(struct i2c_client *client,char *fw_file) {
 			offset=((u32)buffer[0])+0x0100*((u32)buffer[1])+0x010000*((u32)buffer[2])+0x01000000*((u32)buffer[3]);
 			val   =((u32)buffer[4])+0x0100*((u32)buffer[5])+0x010000*((u32)buffer[6])+0x01000000*((u32)buffer[7]);
 		} else {
-			fscanf(fichero,"{%x,%x}, ",&offset,&val);
+			if(!fscanf(fichero,"{%x,%x}, ",&offset,&val)){
+				break;
+			}
 		}
 		/* init page trans, set the page val */
 		if (GSL_PAGE_REG == offset) {
