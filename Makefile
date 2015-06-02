@@ -6,10 +6,8 @@ driver.o: driver.c driver.h
 
 install:
 	install gslx680 /bin
-	#install igslx680.init /etc/init.d/igslx680
-	install gslx680.service /etc/systemd/system/gslx680.service
-	#rm -f /etc/init.d/gslx680
-	#update-rc.d igslx680 defaults
+	install -d /etc/gslx680
+	install touchscreen.fw /etc/gslx680/touchscreen.fw
 
 clean:
 	rm -rf gslx680 *.o
